@@ -1,0 +1,112 @@
+#logo-mobile,
+#slogan,
+#blur-mobile,
+.btn-mobile,
+.button-menu,
+.on .side-bar,
+.on .close {
+    display: initial;
+}
+
+.side-bar,
+#logo-desktop,
+.on .open,
+.close,
+button,
+body::after,
+body::before {
+    display: none;
+}
+
+header {
+    display: flex;
+    padding: 0 2rem 3rem 2rem;
+    border-bottom: .1px solid lightgrey;
+}
+
+.on .side-bar {
+    position: absolute;
+    top: 88px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+    background-color: var(--backgrond);
+}
+
+.on .side-bar ul {
+    gap: unset;
+    display: flex;
+    flex-direction: column;
+}
+
+.on .side-bar ul li {
+    font-size: 2rem;
+    padding: 2rem;
+    border-bottom: .1px solid lightgrey;
+    border-radius: unset;
+}
+
+ul li:hover {
+    box-shadow: none;
+    border: none;
+    border-left: 8px solid var(--button);
+    font-weight: bold;
+}
+
+.btn-mobile:hover{
+    box-shadow: 0 0 10px var(--button), inset 0 0 10px var(--button);
+    border: 1px solid var(--button);
+    font-size: 1.6rem;
+}
+
+#slogan {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+main .title {
+    display: block;
+    font-size: 4rem;
+    line-height: unset;
+    min-width: 100%;
+}
+
+#img-coffee {
+    width: 100%;
+    position: absolute;
+}
+
+.btn-mobile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: transparent;
+    border: 1px solid var(--button);
+    padding: 1rem 3rem;
+    color: var(--text-color);
+    border-radius: .6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.btn-mobile #img-arrow {
+    height: 24px;
+    width: 24px;
+}
+
+#blur-mobile {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}

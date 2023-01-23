@@ -1,0 +1,141 @@
+:root {
+    /* Colors */
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+
+    /* Font Size */
+    font-size: 62.5%;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+  }
+
+  #logo-mobile,
+  #slogan,
+  #blur-mobile,
+  .btn-mobile,
+  .button-menu {
+    display: none;
+  }
+
+  body {
+    background: var(--backgrond);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  body::after {
+    content: "";
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    right: -8%;
+    top: -8%;
+    border-radius: 50%;
+    background-color: var(--button);
+    filter: blur(200px);
+  }
+
+  body::before {
+    content: "";
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: -8%;
+    bottom: -8%;
+    border-radius: 50%;
+    background-color: var(--button);
+    filter: blur(200px);
+  }
+
+  .container {
+    min-width: 80%;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .side-bar {
+    flex-grow: 1;
+  }
+
+  .side-bar ul {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    list-style: none;
+  }
+
+  ul li {
+    padding: .5rem 2rem;
+    border-radius: .6rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  header button {
+    background: transparent;
+    border: 1px solid var(--button);
+    padding: .5rem 2rem;
+    color: var(--text-color);
+    border-radius: .6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    z-index: 1;
+  }
+
+header button:hover,
+ul li:hover {
+    box-shadow: 0 0 10px var(--button), inset 0 0 10px var(--button);
+    border: 1px solid var(--button);
+}
+
+  main {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  main .title {
+    display: inline-block;
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 10rem;
+    cursor: default;
+  }
+
+  .title-two {
+    color: var(--backgrond);
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  }
+
+ .title-two:hover {
+    text-shadow:  var(--button) 0px 54px 55px,  var(--button) 0px -12px 30px,  var(--button) 0px 4px 6px,  var(--button) 0px 12px 13px,  var(--button) 0px -3px 5px;
+    color: var(--text-color);
+  }
+
+  #img-coffee {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
